@@ -35,7 +35,7 @@ sysPrompt <- 'You are a document classifier.  You review text and assign specifi
 # Specify the LLM model to use, assuming it's available in lm-studio
 
 # Model name
-llmModel <- 'qwen2.5-7b-instruct' #'llama-3.2-1b-instruct' #qwen2.5-7b-instruct
+llmModel <- 'llama-3.2-1b-instruct' #'llama-3.2-1b-instruct' #qwen2.5-7b-instruct
 
 # Organize the request payload for the LLM API
 dataLLM <- list(

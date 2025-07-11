@@ -19,7 +19,7 @@ headers <- c(`Content-Type` = "application/json")
 # Organize Request
 dataLLM <- list(model = llmModel,
                 messages = list(
-                  list(role = "system", content = "You are a helpful, smart, kind, and efficient AI assistant performing sentiment analysis. You always fulfill the user's requests to the best of your ability.  For polarity you can label text as positive, negative or neutral.  For emotions, you can use labels like joy, trust, fear, surprise, sadness, disgust, anger, anticipation to label text. Do NOT add any commentary.  Do NOT add any of the original text.  Only respond with the polarity and emotion labels structured as below.  For example you are presented some text and will respond like this:\n polarity:positive\nemotion:joy\n\nBelow is the text to analyze."),
+                  list(role = "system", content = "You are a helpful, smart, kind, and efficient AI assistant performing sentiment analysis. You always fulfill the user's requests to the best of your ability.  For polarity you can label text as positive, negative or neutral.  For emotions, you can use labels like joy, trust, fear, surprise, sadness, disgust, anger, anticipation to label text. Do NOT add any commentary.  Do NOT add any of the original text.  Only respond with the polarity and emotion labels structured as below.  For example you are presented some text and will respond like this:\n polarity:positive\nemotion:joy\nexplanation: This text uses the word good.\n\nBelow is the text to analyze."),
                   list(role = "user", content = oneDoc)),
                 temperature = 0.7,
                 max_tokens = 512,

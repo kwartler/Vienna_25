@@ -74,7 +74,7 @@ Accuracy(y_pred = results$ModelClassification, y_true = results$actual)
 
 # Let's bucket probabilities of winning teams to see the distribution
 winnningTeams <- subset(results, results$actual==1)
-ggplot(winnningTeams, aes(x = winningProbability)) + geom_histogram()
+ggplot(winnningTeams, aes(x = winningProbability)) + geom_density()
 
 # Let's bucket probabilities of losing teams to see the distribution
 losingTeams <- subset(results, results$actual!=1)
@@ -83,7 +83,7 @@ ggplot(losingTeams, aes(x = winningProbability)) + geom_histogram()
 # It's best to compare side by side & easier to see as a density plot
 # Visually how well did we separate our classes?
 ggplot(results, aes(x=winningProbability, color=as.factor(actual))) +
-  geom_density() +
+  geom_histogram() +
   geom_vline(aes(xintercept = cutoff), color = 'green')
 
 
