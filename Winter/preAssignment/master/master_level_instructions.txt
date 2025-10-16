@@ -1,0 +1,19 @@
+```
+# This code will load the data and it can be found on the teaching data set repo
+assignmentData <- read.csv('https://raw.githubusercontent.com/kwartler/teaching-datasets/refs/heads/main/WA_Fn-UseC_-Telco-Customer-Churn.csv')
+```
+
+Master Pre-Module Assessment
+3.	Use the data WA_Fn-UseC_-Telco-Customer-Churn.csv to create a machine learning R script from scratch.  You will be expected to follow these steps in your R script:
+a.	Sample – perform appropriate sampling of the data
+b.	Explore – Explore the training data building visualizations, summary statistics and identify any issues in the data.
+c.	Modify – Process the data to account for missing/NA, factors, and outliers.
+d.	Model – Perform 3 modeling techniques and tune appropriate parameters, and/or change included variables.  The dataset is a “churn” prediction use case. 
+e.	Assess – Assess each of the 3 modeling types to identify the best one.  You need to choose an appropriate metric like RMSE, MAPE, LogLoss, Tweedie Deviance etc based on your understanding of the problem.
+4.	Create 2 presentation slides
+a.	Slide 1: Make it a side-by-side slide:
+i.	Left side: Describe the machine learning workflow with steps you’ve taken to clean the data i.e. remove outliers if applicable
+ii.	Right side: Create a scatterplot of the Y variable with the most correlated x variable.  Apply the g docs theme from `ggthemes`
+b.	Slide 2: Make is a slide that has 3 sections side by side:
+i.	In each section: Name the model, create a 1-2 sentence “lay-person’s” description of the model’s learning method, list any parameters or variables chosen to optimize the model output and list the model’s KPI from the script.  
+ii.	Denote on the slide which of the three methods is the best model.
