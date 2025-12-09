@@ -11,12 +11,14 @@ library(dplyr)
 library(readr)
 
 # "Open" a pack with the correct card rarities function
-crackPack <- "https://raw.githubusercontent.com/kwartler/Harvard_DataMining_Business_Student/master/Lessons/I_CreditModeling/scripts/Z_crackPack.R"
+crackPack <- "https://raw.githubusercontent.com/kwartler/Harvard_DataMining_Business_Student/4f6c4f20b2980066132e80adf64e13a6b506d5fc/Lessons/J_CreditModeling/scripts/Z_crackPack.R"
 source_url(crackPack)
+crackPack
 
-# Calculate the card values
-cardValues <- "https://raw.githubusercontent.com/kwartler/Harvard_DataMining_Business_Student/master/Lessons/I_CreditModeling/scripts/Z_cardValues.R"
+# Get card values accounting for distribution by rarity type
+cardValues <- "https://raw.githubusercontent.com/kwartler/Harvard_DataMining_Business_Student/4f6c4f20b2980066132e80adf64e13a6b506d5fc/Lessons/J_CreditModeling/scripts/Z_cardValues.R"
 source_url(cardValues)
+cardValues
 
 # Bring in the bloomborrow
 # https://www.mtggoldfish.com/sets/Bloomburrow#online ; table top pricing!

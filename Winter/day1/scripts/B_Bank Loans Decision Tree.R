@@ -4,8 +4,7 @@
 #' https://archive.ics.uci.edu/ml/datasets/bank+marketing
 
 
-## Set the working directory
-setwd("~/Desktop/Vienna_24/personalFiles")
+#3 Turn off scientific notation
 options(scipen=999)
 
 ## Load the libraries

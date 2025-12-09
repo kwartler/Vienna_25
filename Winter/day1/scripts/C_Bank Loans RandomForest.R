@@ -1,11 +1,8 @@
 #' Author: Ted Kwartler
-#' Data: Mar 21, 2022
+#' Dec 9, 2026
 #' Purpose: Load data build a random forest tree; this version uses more equally balanced target classes
 #' https://archive.ics.uci.edu/ml/datasets/bank+marketing
 
-
-## Set the working directory
-setwd("~/Desktop/Vienna_24/personalFiles")
 
 # Options
 options(scipen=999)

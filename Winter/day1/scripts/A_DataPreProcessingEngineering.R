@@ -1,5 +1,5 @@
 #' Author: Ted Kwartler
-#' Date: Sept 5 2022
+#' Date: Dec 9, 2026
 #' Purpose: Fundraising PreProcessing
 
 # Libs
@@ -8,9 +8,6 @@ library(dplyr)
 library(ggplot2)
 library(ggthemes)
 options(scipen = 999)
-
-# WD
-setwd("~/Desktop/Vienna_24/personalFiles")
 
 # Read in the data
 donors<- read.csv('https://raw.githubusercontent.com/kwartler/Vienna_24/refs/heads/main/Fall_2024/day1/data/fakeDonorBureau_v2.csv')
@@ -60,7 +57,7 @@ rm(list=ls())
 
 # Now perform designTreatmentsN
 # Read in the data
-donors<- read.csv('https://raw.githubusercontent.com/kwartler/Harvard_DataMining_Business_Student/master/Lessons/D_DM_Workflow/data/fakeDonorBureau_v2.csv')
+donors<- read.csv('https://raw.githubusercontent.com/kwartler/Vienna_24/refs/heads/main/Fall_2024/day1/data/fakeDonorBureau_v2.csv')
 set.seed(2023)
 idx         <- sample(1:nrow(donors),.1*nrow(donors))
 prepData    <- donors[idx,]
@@ -77,7 +74,7 @@ head(treatednonPrepData)
 rm(list=ls())
 
 # Data
-donors <- read.csv('https://raw.githubusercontent.com/kwartler/Harvard_DataMining_Business_Student/master/Lessons/D_DM_Workflow/data/fakeDonorBureau_v2.csv')
+donors <- read.csv('https://raw.githubusercontent.com/kwartler/Vienna_24/refs/heads/main/Fall_2024/day1/data/fakeDonorBureau_v2.csv')
 
 # Fictitious Data Enrichment
 thirdPartyData <- read.csv('https://raw.githubusercontent.com/kwartler/Vienna_24/refs/heads/main/Fall_2024/day1/data/fakeDataEnrichment.csv')
