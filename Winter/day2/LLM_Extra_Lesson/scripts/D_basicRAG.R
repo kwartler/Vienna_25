@@ -15,7 +15,7 @@ llmModel <- 'llama-3.2-1b-instruct'
 embeddingModel <- 'text-embedding-granite-embedding-278m-multilingual'
 sysPromptRAG <- 'You are a helpful, knowledgeable AI assistant. Answer the user\'s question accurately and concisely.  Answer the user\'s question using only the information provided below:\n\n'
 userPrompt <- 'Tell me about the movie Wicked from 2024.  Who directed it?'
-savePath <- '~/Desktop/GSERM_2025/personalFiles/'
+savePath <- '~/Desktop/Vienna_25/personalFiles/'
 headers  <- c('Content-Type' = 'application/json')
 topN <- 3
 maxTokens <- 512

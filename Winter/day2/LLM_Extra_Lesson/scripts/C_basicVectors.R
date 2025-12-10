@@ -11,7 +11,7 @@ library(httr)
 
 # Inputs
 embeddingModel <- 'text-embedding-granite-embedding-278m-multilingual'
-savePath <- '~/Desktop/GSERM_2025/personalFiles/'
+savePath <- '~/Desktop/Vienna_25/personalFiles/'
 headers  <- c('Content-Type' = 'application/json')
 
 # Get data contemporary information

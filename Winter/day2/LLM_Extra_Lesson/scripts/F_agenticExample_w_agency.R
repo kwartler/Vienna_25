@@ -1,3 +1,8 @@
+#' Author: Ted Kwartler
+#' May 5
+#' An Agentic Workflow example
+#' Specialized Tasks
+
 # Libraries
 library(httr)      
 library(jsonlite)  
@@ -8,14 +13,14 @@ library(stringr)
 #prompt <- "What is the capital of Brazil?"
 #prompt <- 'Write ggplot2 code to make a scatter plot of 100 random numbers.  The plot should have a title that says 100 random values.'
 prompt <- "Using the following text, write code to make a word cloud.  The text is: I love this course, it has been so hard but fun  I will bring this love of NLP back to my role for more fun."
-savePath <- '~/Desktop/GSERM_2025/personalFiles/'
+savePath <- '~/Desktop/Vienna_25/personalFiles/'
 
 # LLM Names
 llmModel <- 'llama-3.2-1b-instruct' #small general purpose
 codingLLM <- 'qwen2.5-7b-instruct'  #"slow" but "smarter"     
 # According to reddit users, worth testing out: 
 # gemma3:1B is good at coding
-# gemma3 4B is good at multi0lingual   
+# gemma3 4B is good at multi-lingual   
 
 # LLM API Endpoint
 llmURL <- "http://localhost:1234/v1/chat/completions"
@@ -91,3 +96,5 @@ if(grepl('CODE_TASK:', initialLLMResponse)==T){
 } else {
   print(initialLLMResponse)
 }
+
+# End
