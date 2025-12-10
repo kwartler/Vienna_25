@@ -1,6 +1,6 @@
 #' Use html to markdown to llm workflow for webscraping
 #' TK
-#' Nov 3
+#' Nov 3, 2025
 
 # libraries
 library(httr)

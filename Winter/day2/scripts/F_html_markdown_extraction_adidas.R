@@ -98,8 +98,6 @@ oneProductInfo <- list(id               = df$id,
                        productInventory = parsedData$variation_list,
                        scrapeTime       = Sys.time())
 
-# End
-
 # Construct JSON payload; we're using lm-studio but could be a 3rd part too
 data <- jsonlite::toJSON(
   list(

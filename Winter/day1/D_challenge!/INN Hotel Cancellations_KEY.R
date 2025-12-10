@@ -14,7 +14,7 @@ library(vtreat)
 options(scipen = 999)
 
 # SAMPLE
-hotelData <- read.csv('~/Desktop/Harvard_DataMining_Business_Student/Lessons/F_Tree_RF/challenge!/INNHotelsGroup.csv')
+hotelData <- read.csv('~/Desktop/Vienna_25/Winter/day1/D_challenge!/INNHotelsGroup.csv')
 
 # Let's take 10% for vtreat & split 80/20 for the remaining
 variableTreatmentIdx <- sample(1:nrow(hotelData), nrow(hotelData)*.1)

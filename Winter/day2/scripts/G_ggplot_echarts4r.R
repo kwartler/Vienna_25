@@ -8,7 +8,7 @@ library(ggthemes)
 library(echarts4r)
 
 # Load some example data
-diabetesData <- read.csv('https://raw.githubusercontent.com/kwartler/Vienna_24/refs/heads/main/Fall_2024/day2/data/100_diabetes_no_null_text.csv')
+diabetesData <- read.csv('~/Desktop/teaching-datasets/100_diabetes_no_null_text.csv')
 
 # Build a nice ggplot
 ggplot(diabetesData, aes(x = num_lab_procedures, y = time_in_hospital)) + 
@@ -21,9 +21,9 @@ diabetesData |>
   e_charts(num_lab_procedures) |>
   e_scatter(time_in_hospital, symbol_size = 5, legend = F) |>
   e_toolbox_feature()|>
-  e_zoom() |>
-  e_theme('bee-inspired') |> #more than 12 & you can make custom 
-  e_tooltip()
+  e_zoom() |> e_tooltip()|>
+  e_theme('chalk')  #more than 12 & you can make custom 
+  
 
 
 

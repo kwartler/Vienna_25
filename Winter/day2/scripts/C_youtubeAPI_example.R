@@ -14,10 +14,6 @@ library(plyr)
 # Options; google api returns UTF-8 text
 Sys.setlocale("LC_CTYPE", "en_US.UTF-8")
 
-# WD
-setwd("~/Desktop/Vienna_24/personalFiles")
-
-
 # Youtube URL
 # https://www.youtube.com/watch?v=K5Rly83zfuI&ab_channel=TheDailyShowwithTrevorNoah
 # https://www.youtube.com/watch?v=sal78ACtGTc&ab_channel=SequoiaCapital
