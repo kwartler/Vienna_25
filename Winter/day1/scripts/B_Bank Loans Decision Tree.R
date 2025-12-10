@@ -4,7 +4,7 @@
 #' https://archive.ics.uci.edu/ml/datasets/bank+marketing
 
 
-#3 Turn off scientific notation
+# Turn off scientific notation
 options(scipen=999)
 
 ## Load the libraries
@@ -13,7 +13,7 @@ library(rpart)
 library(rpart.plot) #visualizing
 
 ## Bring in some data
-dat <- read.csv('https://raw.githubusercontent.com/kwartler/Vienna_24/refs/heads/main/Fall_2024/day1/data/bank2.csv') 
+dat <- read.csv('https://raw.githubusercontent.com/kwartler/teaching-datasets/refs/heads/main/bank2.csv') 
 
 # Partitioning
 splitPercent <- round(nrow(dat) %*% .9)
@@ -78,7 +78,7 @@ sum(diag(confMat))/sum(confMat)
 rm(list=ls())
 
 ##########
-dat <- read.csv('https://raw.githubusercontent.com/kwartler/Harvard_DataMining_Business_Student/master/Lessons/F_Tree_RF/data/bank-full_v2.csv') # now a bit more data to approximate real scenario 
+dat <- read.csv('https://raw.githubusercontent.com/kwartler/teaching-datasets/refs/heads/main/bank-full_v2.csv') # now a bit more data to approximate real scenario 
 
 
 # To save time in class, we are only training on 50% of the data

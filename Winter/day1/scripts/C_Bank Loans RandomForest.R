@@ -15,7 +15,7 @@ library(vtreat)
 library(ranger)
 
 ## Bring in some data
-dat <- read.csv('https://raw.githubusercontent.com/kwartler/Vienna_24/refs/heads/main/Fall_2024/day1/data/bank-downSampled.csv')
+dat <- read.csv('https://raw.githubusercontent.com/kwartler/teaching-datasets/refs/heads/main/bank-downSampled.csv')
 
 # EDA
 names(dat)
@@ -124,7 +124,7 @@ Accuracy(treatedTest$Class, threeVotes)
 Accuracy(treatedTest$Class, fiveHundredVoters)
 Accuracy(treatedTest$Class, oneHundredVoters)
 
-# Just to show another implementation, Nnow we can use the ranger package which is a fast implmentation of RF
+# Just to show another implementation, Now we can use the ranger package which is a fast implmentation of RF
 
 # Show the default characteristics
 ?ranger
@@ -139,6 +139,6 @@ rangerRF <- ranger(as.factor(Class) ~ .,
 rangerPreds <- predict(rangerRF, treatedTest)
 
 # KPI
-Accuracy(treatedTest$Class, rangerPreds$predictions)
+Accuracy(treatedTest$Class, rangerPreds$predictions) #differences exist bc ranger treats high dimensional data differently and has improved node splitting logic
 
 # End

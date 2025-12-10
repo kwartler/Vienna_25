@@ -10,7 +10,7 @@ library(ggthemes)
 options(scipen = 999)
 
 # Read in the data
-donors<- read.csv('https://raw.githubusercontent.com/kwartler/Vienna_24/refs/heads/main/Fall_2024/day1/data/fakeDonorBureau_v2.csv')
+donors<- read.csv('https://raw.githubusercontent.com/kwartler/teaching-datasets/refs/heads/main/fakeDonorBureau_v2.csv')
 
 # Examine; Here you would perform EDA
 summary(donors)
@@ -57,7 +57,7 @@ rm(list=ls())
 
 # Now perform designTreatmentsN
 # Read in the data
-donors<- read.csv('https://raw.githubusercontent.com/kwartler/Vienna_24/refs/heads/main/Fall_2024/day1/data/fakeDonorBureau_v2.csv')
+donors<- read.csv('https://raw.githubusercontent.com/kwartler/teaching-datasets/refs/heads/main/fakeDonorBureau_v2.csv')
 set.seed(2023)
 idx         <- sample(1:nrow(donors),.1*nrow(donors))
 prepData    <- donors[idx,]
@@ -74,10 +74,10 @@ head(treatednonPrepData)
 rm(list=ls())
 
 # Data
-donors <- read.csv('https://raw.githubusercontent.com/kwartler/Vienna_24/refs/heads/main/Fall_2024/day1/data/fakeDonorBureau_v2.csv')
+donors <- read.csv('https://raw.githubusercontent.com/kwartler/teaching-datasets/refs/heads/main/fakeDonorBureau_v2.csv')
 
 # Fictitious Data Enrichment
-thirdPartyData <- read.csv('https://raw.githubusercontent.com/kwartler/Vienna_24/refs/heads/main/Fall_2024/day1/data/fakeDataEnrichment.csv')
+thirdPartyData <- read.csv('https://raw.githubusercontent.com/kwartler/teaching-datasets/refs/heads/main/fakeDataEnrichment.csv')
 
 # Examine
 head(thirdPartyData)

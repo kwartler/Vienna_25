@@ -19,7 +19,7 @@ source_url(cardValues)
 cardValues
 
 # Card list obtained online
-cards <- read.csv("https://raw.githubusercontent.com/kwartler/Vienna_24/refs/heads/main/Fall_2024/day1/data/Guilds_10_16_18.csv")
+cards <- read.csv("https://raw.githubusercontent.com/kwartler/teaching-datasets/refs/heads/main/Guilds_10_16_18.csv")
 
 # Examine
 head(cards)

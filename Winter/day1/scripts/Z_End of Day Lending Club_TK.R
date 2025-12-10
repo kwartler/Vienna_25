@@ -34,8 +34,8 @@ removePercentSign <- function(df, colNamesToFix){
 
 
 #### Data Load - your dependent variable is "y" which is a binary output; 1 is success 0 is a default
-loans <- read.csv('https://github.com/kwartler/Vienna_24/raw/refs/heads/main/Fall_2024/day1/data/20K_sampleLoans.csv')
-investmentOpportunities <- read.csv('https://raw.githubusercontent.com/kwartler/Vienna_24/refs/heads/main/Fall_2024/day1/data/OpenNotesJune18_v2.csv')
+loans <- read.csv('https://github.com/kwartler/teaching-datasets/raw/refs/heads/main/20K_sampleLoans.csv')
+investmentOpportunities <- read.csv('https://raw.githubusercontent.com/kwartler/teaching-datasets/refs/heads/main/OpenNotesJune18_v2.csv')
 
 #### Sample - end of day 1
 # First step is to identify the column names in investmentOpportunities and use those to select the same columns in loans.  Second step is to append the loans$y so you have 28 columns in loans.
@@ -51,7 +51,7 @@ smallLoans <- loans[,colIndex]
 # append the original y variable
 smallLoans$y <- loans$y
 
-# Let's fix the percentage columns revol_util, int_rate
+# Let's fix the percentage columns revol_util, int_rate; will get an error since select() changed but it still works
 smallLoans <- removePercentSign(df            = smallLoans, 
                                 colNamesToFix = c('int_rate','revol_util'))
 
@@ -77,7 +77,7 @@ two_way_table_grade_y <- table(trainData$grade, trainData$y)
 
 # Plot missing percentage by variables
 plot_missing(smallLoans) +theme_gdocs() + ggtitle('Percent of Lending CLub missinginess')
-ggsave('pct_missing.jpg')
+ggsave('~/Desktop/Vienna_25/personalFiles/pct_missing.jpg')
 plot_correlation(smallLoans)
 
 # Plot of annual Income as x; loan amount as y
@@ -114,15 +114,16 @@ trainPreds <- predict(fitRanger, treatedTrain)
 testPreds <- predict(fitRanger, treatedTest)
 
 # Convert prob to class
-
+trainClass <- ifelse(trainPreds$predictions[,2] >= 0.5, 1,0)
+testClass  <- ifelse(testPreds$predictions[,2] >= 0.5, 1,0)
 
 # Conf Matrix
-table(trainPreds$predictions, treatedTrain$y)
-table(testPreds$predictions, treatedTest$y)
+table(trainClass, treatedTrain$y)
+table(testClass, treatedTest$y)
 
 # KPI
-Accuracy(y_pred = trainPreds$predictions, y_true = treatedTrain$y)
-Accuracy(y_pred = testPreds$predictions, y_true = treatedTest$y)
+Accuracy(y_pred = trainClass, y_true = treatedTrain$y)
+Accuracy(y_pred = testClass, y_true = treatedTest$y)
 
 
 #### Apply - end of day 2; let's fix the term var
@@ -135,3 +136,4 @@ investmentPredictions <- predict(fitRanger, treatedInvestmentOpp)
 
 
 # End
+
