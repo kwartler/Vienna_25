@@ -4,17 +4,17 @@
 #' Source: https://www.kaggle.com/datasets/mariyamalshatta/inn-hotels-group
 
 # library & options - ggplot, ggthemes, rpart, randomForest, caret (if you want to try other models), MLmetrics, vtreat
-library(_)
-library(_)
-library(_)
-library(_)
-library(_)
-library(_)
-library(_)
+library(ggplot2)
+library(ggthemes)
+library(rpart)
+library(randomForest)
+library(caret)
+library(MLmetrics)
+library(vtreat)
 options(scipen = 999)
 
 # SAMPLE
-hotelData <- read.csv('https://raw.githubusercontent.com/kwartler/Harvard_DataMining_Business_Student/master/Lessons/F_Tree_RF/challenge!/INNHotelsGroup.csv')
+hotelData <- read.csv('https://raw.githubusercontent.com/kwartler/teaching-datasets/refs/heads/main/INNHotelsGroup.csv')
 
 # Let's take 10% for vtreat & split 80/20 for the remaining
 variableTreatmentIdx <- sample(1:nrow(hotelData), nrow(hotelData)*.1)

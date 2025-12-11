@@ -13,7 +13,8 @@ library(tm)
 library(glmnet)
 library(MLmetrics)
 library(vtreat)
-library(fairness)
+library(fairness) #archived
+#devtools::install_version("fairness",version="1.2.2")
 
 # Custom cleaning function
 resumeClean<-function(xVec, stops=stopwords("SMART")){
@@ -25,7 +26,7 @@ resumeClean<-function(xVec, stops=stopwords("SMART")){
 }
 
 # Data
-candidates <- read.csv('~/Desktop/Vienna_25/Winter/day2/data/HR Hiring (Bias & Fairness).csv')
+candidates <- read.csv('https://github.com/kwartler/teaching-datasets/raw/refs/heads/main/HR%20Hiring%20(Bias%20&%20Fairness).csv')
 
 ### SAMPLE : Partitioning
 set.seed(1234)
