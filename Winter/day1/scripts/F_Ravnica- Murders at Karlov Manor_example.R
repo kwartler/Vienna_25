@@ -79,8 +79,8 @@ fixPriceOrder <- function(df) {
 # Apply the function to your data frame
 dfUnique <- fixPriceOrder(dfUnique)
 
-#write.csv(dfUnique, '~/Desktop/teaching-datasets/Murders at Karlov Manor.csv', row.names = F)
-dfUnique <- read.csv('~/Desktop/teaching-datasets/Murders at Karlov Manor.csv')
+### Read in from the teaching data repo; above is shown for reference
+dfUnique <- read.csv('https://raw.githubusercontent.com/kwartler/teaching-datasets/refs/heads/main/Murders%20at%20Karlov%20Manor.csv')
 
 # "Open" a pack with the correct card rarities function
 crackPack <- "https://raw.githubusercontent.com/kwartler/Harvard_DataMining_Business_Student/4f6c4f20b2980066132e80adf64e13a6b506d5fc/Lessons/J_CreditModeling/scripts/Z_crackPack.R"
