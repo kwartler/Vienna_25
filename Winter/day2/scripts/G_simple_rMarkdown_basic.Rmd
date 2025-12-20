@@ -1,5 +1,5 @@
 ---
-title: "Untitled"
+title: "class time"
 author: "Ted Kwartler"
 date: "2024-11-04"
 output: html_document

@@ -6,7 +6,7 @@
 library(httr)
 
 # At this point you don't need an API key but you need it for other services
-jinaAPI <- 'jina_c1c81dab252d430ab24eec12d7c94f94hPRD5LlUYAktUBZDqnfuhXRsBA9B'
+jinaAPI <- 'jina_f6685d8f557149b5888c92063a7572b2s4usyeWQRGTKaSWjcU8wN-H-uwj3'
 
 # Make it part of the GET request
 #headers <- c(  Authorization = "Bearer jina_c1c81dab252d430ab24eec12d7c94f94hPRD5LlUYAktUBZDqnfuhXRsBA9B")
