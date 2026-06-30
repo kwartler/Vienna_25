@@ -1,0 +1,11 @@
+REMOVED AS DUPLICATE during teaching-datasets dedupe on 2026-06-14.
+
+Original file: newCar_w_outliers_more_NA.csv
+Size: 4.7MB
+MD5: a1e67e491f95d32521afa264e0d9c2cc
+
+Canonical copy now lives in the teaching-datasets repo:
+  repo path: newCar_w_outliers_more_NA.csv
+  raw URL:   https://raw.githubusercontent.com/kwartler/teaching-datasets/main/newCar_w_outliers_more_NA.csv
+
+Fetch in R, e.g.:  read.csv(url("https://raw.githubusercontent.com/kwartler/teaching-datasets/main/newCar_w_outliers_more_NA.csv"))
